@@ -11,16 +11,18 @@ class _DemoScreenState extends State<DemoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Users'),
-        leading: const Icon(Icons.arrow_back),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            onPressed: () => _showFilterDrawer(context),
-          ),
-        ],
-      ),
+     appBar: AppBar(
+  title: Text('Users'),
+  leading: Icon(Icons.arrow_back),
+  actions: [
+    Icon(Icons.search),
+    SizedBox(width: 16),
+    Icon(Icons.filter_list),
+    SizedBox(width: 16),
+    Icon(Icons.more_vert),
+  ],
+),
+
       body: ListView(
         padding: const EdgeInsets.all(8),
         children: List.generate(3, (index) => _buildUserCard()),
